@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="style/styles.css">
+        <title>STK</title>
+    </head>
+    <body>
+        <header>
+            <h1>Statliga Televisionskanalen</h1>
+        </header>
+        <form id="formTV">
+            <fieldset>
+                <legend>Lägg Till Program</legend>
+                <label for="title">Titel:</label><br>
+                <input type="text" id="title" name="title"><br>
+
+                <label for="description">Beskrivning:</label><br>
+                <textarea id="description" name="description" rows="5" cols="21"></textarea><br>
+
+                <label for="age">Åldersgräns:</label><br>
+                <select id="age" name="age">
+                    <option value="15">15</option>
+                    <option value="11">11</option>
+                    <option value="7">7</option>
+                    <option value="barntillåten">Barntillåten</option>
+                </select>
+
+                <br><br>
+
+                <button type="button" onclick="addProgram()">Lägg till program</button>
+                
+            </fieldset>
+        </form>
+        <fieldset>
+            <legend>Sök Program</legend>
+            <input type="text" id="searchInput" placeholder="Sök program..." oninput="search()">
+        </fieldset>
+        <fieldset>
+            <legend>TV-Program</legend>
+            <ul id="programList"></ul>
+            <button id="delete" type="button" onclick="clearPrograms()">RADERA ALLA PROGRAM</button>
+        </fieldset>
+        <script src="scripts/STK.js"></script>
+
+    </body>
+</html>
